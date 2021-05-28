@@ -1,0 +1,29 @@
+{
+    "Routes":[
+        {
+            "DownStreamPathTemplate":"/customers/{catchAll}",
+            "DownStreamScheme":"https",
+            "DownStreamHostAndPorts":[
+                {
+                    "Host":"localhost",
+                    "Port":"5001"
+                }
+            ],
+            "UpStreamPathTemplate":"/customers/{catchAll}"
+        },
+        {
+            "DownStreamPathTemplate":"/products/{catchAll}",
+            "DownStreamScheme":"https",
+            "DownStreamHostAndPorts":[
+                {
+                    "Host":"localhost",
+                    "Port":"5002"
+                }
+            ],
+            "UpStreamPathTemplate":"/products/{catchAll}"
+        }
+    ],
+    "GlobalConfiguration":{
+        "BaseUrl":"https://localhost:5000"
+    }
+}
